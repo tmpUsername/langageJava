@@ -114,13 +114,13 @@ public class JeuMorpion {
         }
     }
 
-    public static boolean nombreValide( int n) {
+    public static boolean nombreValide(int n) {
         return n < 4 && n > 0;
     }
-    
+
     public static int choixXJoueur(int numeroJoueur) throws IOException {
         int res = Integer.valueOf(ConsoleUtil.lireTexte(String.format("Joueur %d, indiquez la ligne de votre coup", numeroJoueur)));
-        while (!nombreValide(res)){
+        while (!nombreValide(res)) {
             System.out.println("Erreur: Veuillez sair un nombre entre 1 et 3");
             res = Integer.valueOf(ConsoleUtil.lireTexte(String.format("Joueur %d, indiquez la ligne de votre coup", numeroJoueur)));
         }
@@ -128,10 +128,10 @@ public class JeuMorpion {
     }
 
     public static int choixYJoueur(int numeroJoueur) throws IOException {
-        int res= Integer.valueOf(ConsoleUtil.lireTexte(String.format("Joueur %d, indiquez la colonne de votre coup", numeroJoueur)));
-        while (!nombreValide(res)){
+        int res = Integer.valueOf(ConsoleUtil.lireTexte(String.format("Joueur %d, indiquez la colonne de votre coup", numeroJoueur)));
+        while (!nombreValide(res)) {
             System.out.println("Erreur: Veuillez sair un nombre entre 1 et 3");
-            res= Integer.valueOf(ConsoleUtil.lireTexte(String.format("Joueur %d, indiquez la colonne de votre coup", numeroJoueur)));
+            res = Integer.valueOf(ConsoleUtil.lireTexte(String.format("Joueur %d, indiquez la colonne de votre coup", numeroJoueur)));
         }
         return res - 1;
     }
@@ -139,21 +139,21 @@ public class JeuMorpion {
     public static void gg(int joueur) {
         System.out.format("Le joueur %d a gagné ! GG!\n", joueur);
     }
-    
-    public static boolean estTermine(char[][] tab, int joueur) {
-        for (int i = 0; i < tab.length; i++) {
-            int tmp = tab[i][0];
-            if (tmp != '*' && tmp == tab[i][1] && tmp == tab[i][2]) {
-                gg(joueur);
-                return true;
-            }
-            tmp = tab[0][i];
-            if (tmp != '*' && tmp == tab[1][i] && tmp == tab[2][i]) {
-                gg(joueur);
-                return true;
-            }
+
+    public static boolean estTermine(char[][] tab, int joueur, int x, int y) {
+        //test horizontal vertical
+        int tmp = tab[x][0];
+        if (tmp == tab[x][1] && tmp == tab[x][2]) {
+            gg(joueur);
+            return true;
+        }
+        tmp = tab[0][y];
+        if (tmp == tab[1][y] && tmp == tab[2][y]) {
+            gg(joueur);
+            return true;
         }
 
+        //test diagonal
         if (tab[0][0] != '*' && tab[1][1] == tab[0][0] && tab[2][2] == tab[0][0]) {
             gg(joueur);
             return true;
@@ -161,7 +161,7 @@ public class JeuMorpion {
             gg(joueur);
             return true;
         }
-        
+
         for (char[] cs : tab) {
             for (char c : cs) {
                 if (c == '*') {
@@ -191,16 +191,13 @@ public class JeuMorpion {
     }
 
     public static int joueurSuivant(int joueur) {
-        return (joueur + 1) % 2;
+        return (joueur % 2) + 1;
     }
-    
-    public static void main(String[] args) throws IOException {
 
+    public static void main(String[] args) throws IOException {
         //creation du plateau
         char[][] plateau = nouveauPlateauChar(3, 3);
-
         init(plateau);
-
         afficher(plateau);
 
         //début du jeu
@@ -217,6 +214,6 @@ public class JeuMorpion {
             maj(plateau, x, y, joueur);
             afficher(plateau);
             //changer de joueur
-        } while (!estTermine(plateau, joueur));
+        } while (!estTermine(plateau, joueur, x, y));
     }
 }
