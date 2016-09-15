@@ -6,6 +6,7 @@
 package test1;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import test1.util.ConsoleUtil;
 import test1.util.MathUtil;
 
@@ -40,30 +41,27 @@ public class jeuDeMemory {
 
     public static char[][] generePlateau(int x, int y) {
         //genere le vecteur des paires
-        char[] valeurs = new char[x * y / 2];
-
-        for (int i = 0; i < valeurs.length; i++) {
+        ArrayList<Character> charAlea = new ArrayList<>();
+        
+        for (int i = 0; i < x*y/2; i++) {
             char c = (char) MathUtil.genererNombreAleatoire(97, 122);
-            while (appartient(c, valeurs, i - 1)) {
+            while (charAlea.contains(c)) {
                 c = (char) MathUtil.genererNombreAleatoire(97, 122);
             }
-            valeurs[i] = c;
+            charAlea.add(MathUtil.genererNombreAleatoire(0, charAlea.size()), c);
+            charAlea.add(MathUtil.genererNombreAleatoire(0, charAlea.size()), c);
         }
-
+        
         //remplir tableau
         char[][] tab = new char[x][y];
-        int iterateur = 0;
-        char c = (char) MathUtil.genererNombreAleatoire(97, 122);
         //genere le tableau de paire
         for (char[] ligne : tab) {
             for (int col = 0; col < ligne.length; col++) {
-                ligne[col] = valeurs[iterateur / 2];
-                iterateur++;
+                ligne[col] = charAlea.remove(0);
             }
         }
 
         //randomize le tableau
-        randomize(tab);
         return tab;
     }
 
