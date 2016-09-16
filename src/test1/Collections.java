@@ -39,5 +39,7 @@ public class Collections {
         liste4.removeAll(liste1);
         
         System.out.println(liste4);
+        
+        
     }
 }
