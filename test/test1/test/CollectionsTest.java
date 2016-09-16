@@ -39,4 +39,17 @@ public class CollectionsTest {
         
         Assert.assertSame("Super langage", map.get("Ruby"));
     }
+    
+    @Test
+    public void supprimeLangageC() {
+        HashMap<String, String> map = new HashMap<>();
+        
+        map.put("Java", "Langage de programmation objet");
+        map.put("C", "Langage de programmation structuré");
+        map.put("Ruby", "Langage de script Objet");
+        
+        map.remove("C");
+        
+        Assert.assertFalse(map.containsKey("C"));
+    }
 }
