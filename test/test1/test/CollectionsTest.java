@@ -72,4 +72,18 @@ public class CollectionsTest {
             Assert.assertTrue(map.containsKey(elem.getKey()));
         });
     }
+    
+    @Test
+    public void itereSurcles() {
+        HashMap<String, String> map = new HashMap<>();
+
+        map.put("Java", "Langage de programmation objet");
+        map.put("C", "Langage de programmation structuré");
+        map.put("Ruby", "Langage de script Objet");
+        
+        map.keySet().stream().forEach((key) -> {
+            Assert.assertNotNull(map.get(key));
+        });
+        
+    }
 }
