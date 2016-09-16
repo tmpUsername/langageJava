@@ -24,7 +24,7 @@ public class CollectionsTest {
         map.put("C", "Langage de programmation structuré");
         map.put("Ruby", "Langage de script Objet");
         
-        map.get("Ruby");
+        Assert.assertSame(map.get("Ruby"),"Langage de script Objet");
     }
     
     @Test
