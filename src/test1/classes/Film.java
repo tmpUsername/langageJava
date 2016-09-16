@@ -11,4 +11,11 @@ package test1.classes;
  */
 public class Film {
     
+    private String titre;
+    private Integer duree;
+    private String synopsis;
+    private Integer annee;
+    
+    
+    
 }
