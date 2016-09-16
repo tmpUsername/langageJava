@@ -68,8 +68,8 @@ public class CollectionsTest {
 
         map.putAll(map1);
 
-        for (Map.Entry<String, String> elem : map1.entrySet()) {
+        map1.entrySet().stream().forEach((elem) -> {
             Assert.assertTrue(map.containsKey(elem.getKey()));
-        }
+        });
     }
 }
