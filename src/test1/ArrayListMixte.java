@@ -32,6 +32,7 @@ public class ArrayListMixte {
         filtre.add(4);
         filtre.add(5);
         filtre.add(6);
+        filtre.add(1);
         
         //Filtrage de la liste avec le filtre
         liste.removeAll(filtre);
