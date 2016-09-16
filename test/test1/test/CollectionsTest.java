@@ -67,9 +67,9 @@ public class CollectionsTest {
         map1.put("Ruby", "Langage de script Objet");
 
         map.putAll(map1);
-
-        map1.entrySet().stream().forEach((elem) -> {
-            Assert.assertTrue(map.containsKey(elem.getKey()));
+        
+        map1.forEach((key, value) -> {
+            Assert.assertTrue(map.containsKey(key));
         });
     }
     
@@ -81,7 +81,7 @@ public class CollectionsTest {
         map.put("C", "Langage de programmation structuré");
         map.put("Ruby", "Langage de script Objet");
         
-        map.keySet().stream().forEach((key) -> {
+        map.forEach((key, value) -> {
             Assert.assertNotNull(map.get(key));
         });
         
