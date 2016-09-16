@@ -23,6 +23,9 @@ public class Film {
     
     ////ACCESSOR////
     
+    public void setTitre(String titre) {
+        this.titre = titre;
+    }
     
     ////METHODS////
     
