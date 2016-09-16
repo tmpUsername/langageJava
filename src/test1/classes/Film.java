@@ -27,6 +27,10 @@ public class Film {
         this.titre = titre;
     }
     
+    public String getTitre(){
+        return this.titre;
+    }
+    
     ////METHODS////
     
     
