@@ -5,6 +5,8 @@
  */
 package test1.classes;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author admin
@@ -16,6 +18,8 @@ public class Film {
     private Integer duree;
     private String synopsis;
     private Integer annee;
+    private Genre genre;
+    private ArrayList<Acteur> acteurs;
     
     ////CONSTRUCTOR////
     
@@ -54,5 +58,7 @@ public class Film {
     }
     
     ////METHODS////
+
+    }
     
 }
