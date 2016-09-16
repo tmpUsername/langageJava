@@ -6,6 +6,7 @@
 package test1.test;
 
 import java.util.HashMap;
+import org.junit.Assert;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -24,5 +25,18 @@ public class CollectionsTest {
         map.put("Ruby", "Langage de script Objet");
         
         map.get("Ruby");
+    }
+    
+    @Test
+    public void remplaceDefRubyParSuperLangage(){
+        HashMap<String, String> map = new HashMap<>();
+        
+        map.put("Java", "Langage de programmation objet");
+        map.put("C", "Langage de programmation structuré");
+        map.put("Ruby", "Langage de script Objet");
+        
+        map.replace("Ruby", "Super langage");
+        
+        Assert.assertSame("Super langage", map.get("Ruby"));
     }
 }
