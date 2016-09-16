@@ -10,5 +10,12 @@ package test1.classes;
  * @author admin
  */
 public class Acteur {
+    ////ATTRIBUTS
+    private String nom;
+    private String prenom;
+    
+    ////CONSTRUCTOR
+    
+    ////ACCESSORS
     
 }
