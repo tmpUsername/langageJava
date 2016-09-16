@@ -15,7 +15,14 @@ import static org.junit.Assert.*;
  */
 public class CollectionsTest {
     
-    public void map(){
+    @Test
+    public void recupRuby(){
+        HashMap<String, String> map = new HashMap<>();
         
+        map.put("Java", "Langage de programmation objet");
+        map.put("C", "Langage de programmation structuré");
+        map.put("Ruby", "Langage de script Objet");
+        
+        map.get("Ruby");
     }
 }
