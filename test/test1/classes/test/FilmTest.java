@@ -5,8 +5,9 @@
  */
 package test1.classes.test;
 
+import junit.framework.Assert;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import test1.classes.Film;
 
 /**
  *
@@ -14,6 +15,12 @@ import static org.junit.Assert.*;
  */
 public class FilmTest {
     
-    
+   @Test
+   public void setterEtGetter() {
+       Film pulpFiction = new Film();
+       
+       pulpFiction.setTitre("Pulp Fiction");
+       Assert.assertEquals("Pulp Fiction", pulpFiction.getTitre());
+   }
     
 }
