@@ -52,4 +52,17 @@ public class CollectionsTest {
         
         Assert.assertFalse(map.containsKey("C"));
     }
+    
+    @Test
+    public void CreerNouvMap(){
+        HashMap<String, String> map = new HashMap<>();
+        
+        map.put("PHP", "Langage de programmation web");
+        map.put("Python", "Langage de script");
+        
+        Assert.assertTrue(map.containsKey("PHP"));
+        Assert.assertTrue(map.containsKey("Python"));
+    }
+    
+    
 }
