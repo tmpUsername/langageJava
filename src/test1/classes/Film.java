@@ -12,7 +12,6 @@ package test1.classes;
 public class Film {
     
     ////ATTRIBUTS////
-    
     private String titre;
     private Integer duree;
     private String synopsis;
@@ -22,7 +21,6 @@ public class Film {
     
     
     ////ACCESSOR////
-    
     public void setTitre(String titre) {
         this.titre = titre;
     }
@@ -31,8 +29,30 @@ public class Film {
         return this.titre;
     }
     
+    public Integer getDuree() {
+        return duree;
+    }
+
+    public void setDuree(Integer duree) {
+        this.duree = duree;
+    }
+
+    public String getSynopsis() {
+        return synopsis;
+    }
+
+    public void setSynopsis(String synopsis) {
+        this.synopsis = synopsis;
+    }
+
+    public Integer getAnnee() {
+        return annee;
+    }
+
+    public void setAnnee(Integer annee) {
+        this.annee = annee;
+    }
+    
     ////METHODS////
-    
-    
     
 }
