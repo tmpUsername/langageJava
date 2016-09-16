@@ -5,6 +5,8 @@
  */
 package test1;
 
+import java.util.HashSet;
+
 /**
  *
  * @author admin
@@ -12,6 +14,12 @@ package test1;
 public class SetTest {
     
     public static void main(String[] args) {
+        HashSet<String> set = new HashSet<>();
         
+        set.add("Thomas");
+        set.add("Digna");
+        set.add("Thomas");
+        
+        System.out.println(set);
     }
 }
