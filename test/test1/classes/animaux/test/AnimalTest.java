@@ -5,10 +5,13 @@
  */
 package test1.classes.animaux.test;
 
+import java.util.ArrayList;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import test1.classes.animaux.Animal;
 import test1.classes.animaux.Poisson;
+import test1.classes.animaux.Serpent;
+import test1.classes.animaux.Tortue;
 
 /**
  *
@@ -22,6 +25,19 @@ public class AnimalTest {
         
         p.bouger();
         p.manger();
+        
+        System.out.println("FIn premier test");
+        
+        ArrayList<Animal> listeDAnimaux = new ArrayList<>();
+        
+        listeDAnimaux.add(new Poisson("Maurice"));
+        listeDAnimaux.add(new Serpent("Kaa"));
+        listeDAnimaux.add(new Tortue("Franklin"));
+        
+        listeDAnimaux.forEach(animal -> {
+            animal.bouger();
+            animal.manger();
+        });
     }
     
 }
