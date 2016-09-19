@@ -18,7 +18,7 @@ public class AnimalTest {
     
     @Test
     public void testouillage(){
-        Animal p = new Poisson();
+        Animal p = new Poisson("Michel");
         
         p.bouger();
         p.manger();
