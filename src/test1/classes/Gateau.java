@@ -15,5 +15,21 @@ public class Gateau {
     private String forme;
     private String gout;
     
+    ////ACCESSORS
+    public String getForme() {
+        return forme;
+    }
+
+    public void setForme(String forme) {
+        this.forme = forme;
+    }
+
+    public String getGout() {
+        return gout;
+    }
+
+    public void setGout(String gout) {
+        this.gout = gout;
+    }
     
 }
