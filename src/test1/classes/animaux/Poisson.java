@@ -26,4 +26,8 @@ public class Poisson extends Animal{
         System.out.println(this.getNom() + " nage.");
     }
     
+        @Override
+    public void sleep() {
+        System.out.println(this.getNom() + " dors en nageant");
+    }
 }
