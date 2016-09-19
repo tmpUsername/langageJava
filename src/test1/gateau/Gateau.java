@@ -15,7 +15,7 @@ public class Gateau {
     private static String forme = "Rond";
     private String gout;
     private String couleur;
-    public static int nbGateau = 0;
+    private static int nbGateau = 0;
     
     ////CONSTRUCTOR
     public Gateau(String gout, String couleur) {
@@ -53,6 +53,10 @@ public class Gateau {
 
     public void setCouleur(String couleur) {
         this.couleur = couleur;
+    }
+
+    public static int getNbGateau() {
+        return nbGateau;
     }
     
     ////METHODS
