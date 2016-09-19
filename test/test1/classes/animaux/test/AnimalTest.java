@@ -35,6 +35,7 @@ public class AnimalTest {
         listeDAnimaux.add(new Tortue("Franklin"));
         
         listeDAnimaux.forEach(animal -> {
+            System.out.println("-- " + animal.getClass().getSimpleName());
             animal.bouger();
             animal.manger();
         });
