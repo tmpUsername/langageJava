@@ -13,7 +13,6 @@ import java.util.HashSet;
  * @author admin
  */
 public class Film {
-    
     ////ATTRIBUTS////
     private String titre;
     private Integer duree;
@@ -76,6 +75,19 @@ public class Film {
     public void setAnnee(Integer annee) {
         this.annee = annee;
     }
+
+    public HashSet<Acteur> getActeurs() {
+        return acteurs;
+    }
+
+    public Genre getGenre() {
+        return genre;
+    }
+
+    public void setGenre(Genre genre) {
+        this.genre = genre;
+    }
+    
     
     ////METHODS////
     public void ajouteActeur(Acteur acteur){
@@ -91,5 +103,4 @@ public class Film {
         return "Film {" + "titre:" + titre  + ", synopsis:" + 
                 synopsis + "}";
     }
-    
 }
