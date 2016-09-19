@@ -22,7 +22,7 @@ public class Tortue extends Reptile{
 
     @Override
     public void bouger() {
-        System.out.println(this.getNom() + " marche quand je suis sur terre");
+        System.out.println(this.getNom() + " marche quand il est sur terre");
     }
     
 }
