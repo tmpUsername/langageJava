@@ -13,12 +13,12 @@ public class Poisson extends Animal{
 
     @Override
     public void manger() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println(this.getNom() + " gobe.");
     }
 
     @Override
     public void bouger() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println(this.getNom() + " nage.");
     }
     
 }
