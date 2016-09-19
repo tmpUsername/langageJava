@@ -22,7 +22,21 @@ public class Film {
     private ArrayList<Acteur> acteurs = new ArrayList<>();
     
     ////CONSTRUCTOR////
-    
+    public Film(String titre, Integer duree, String synopsis, Integer annee, Genre genre) {
+        this.titre = titre;
+        this.duree = duree;
+        this.synopsis = synopsis;
+        this.annee = annee;
+        this.genre = genre;
+    }
+    public Film(String titre, Integer duree, String synopsis, Integer annee, Genre genre, ArrayList<Acteur> acteurs) {
+        this.titre = titre;
+        this.duree = duree;
+        this.synopsis = synopsis;
+        this.annee = annee;
+        this.genre = genre;
+        this.acteurs = acteurs;
+    }
     
     ////ACCESSOR////
     public void setTitre(String titre) {
