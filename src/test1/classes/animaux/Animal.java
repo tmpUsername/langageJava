@@ -11,7 +11,7 @@ package test1.classes.animaux;
  */
 abstract public class Animal {
     ////ATTRIBUTS
-    private String nom;
+    protected String nom;
     ////ACCESSORS
     public String getNom() {
         return nom;
