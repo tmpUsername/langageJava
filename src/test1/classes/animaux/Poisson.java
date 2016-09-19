@@ -12,9 +12,9 @@ package test1.classes.animaux;
 public class Poisson extends Animal{
     ////CONSTRUCTOR
     public Poisson(String nom) {
-        this.nom = nom;
+        super(nom);
     }
-
+    
     ////METHODS
     @Override
     public void manger() {
