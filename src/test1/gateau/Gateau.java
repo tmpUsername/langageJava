@@ -21,6 +21,11 @@ public class Gateau {
         this.gout = gout;
         this.couleur = couleur;
     }
+
+    public Gateau() {
+        this.gout = "chocolat";
+        this.couleur = "noir";
+    }
     
     ////ACCESSORS
     public String getForme() {
