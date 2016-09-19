@@ -7,6 +7,7 @@ package test1.classes.animaux.test;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import test1.classes.animaux.Animal;
 import test1.classes.animaux.Poisson;
 
 /**
@@ -17,7 +18,7 @@ public class AnimalTest {
     
     @Test
     public void testouillage(){
-        Poisson p = new Poisson();
+        Animal p = new Poisson();
         
         p.bouger();
         p.manger();
