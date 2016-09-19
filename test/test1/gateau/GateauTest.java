@@ -14,7 +14,17 @@ import static org.junit.Assert.*;
  */
 public class GateauTest {
     
-    public GateauTest() {
+    @Test
+    public void test(){
+        Gateau premier = new Gateau();
+        Gateau deuxieme = new Gateau();
+        Gateau troisieme = new Gateau();
+        
+        premier.setGout("chocolat");
+        deuxieme.setGout("Chocolat");
+        troisieme.setGout("Citron");
+        
+        System.out.println(premier + "\n" + deuxieme + "\n" + troisieme);
     }
     
 }
