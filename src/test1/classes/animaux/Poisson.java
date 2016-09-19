@@ -10,7 +10,12 @@ package test1.classes.animaux;
  * @author admin
  */
 public class Poisson extends Animal{
+    ////CONSTRUCTOR
+    public Poisson(String nom) {
+        this.nom = nom;
+    }
 
+    ////METHODS
     @Override
     public void manger() {
         System.out.println(this.getNom() + " gobe.");
