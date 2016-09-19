@@ -14,5 +14,10 @@ abstract public class Reptile extends Animal{
     public Reptile(String nom) {
         super(nom);
     }
+
+    @Override
+    public void sleep() {
+        System.out.println(this.getNom() + " dors allongé");
+    }
     
 }
