@@ -17,16 +17,9 @@ public class GateauTest {
     
     @Test
     public void test(){
-        Gateau premier = new Gateau();
-        Gateau deuxieme = new Gateau();
-        Gateau troisieme = new Gateau();
-        
-        premier.setGout("Chocolat");
-        premier.setCouleur("Blanc");
-        deuxieme.setGout("Chocolat");
-        deuxieme.setCouleur("Noir");
-        troisieme.setGout("Citron");
-        troisieme.setCouleur("Jaune");
+        Gateau premier = new Gateau("chocolat", "blanc");
+        Gateau deuxieme = new Gateau("chocolat", "noir");
+        Gateau troisieme = new Gateau("chocolat", "jaune");
         
         System.out.println(premier + "\n" + deuxieme + "\n" + troisieme);
     }
