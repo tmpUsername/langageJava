@@ -12,6 +12,10 @@ package test1.classes.animaux;
 abstract public class Animal {
     ////ATTRIBUTS
     private String nom;
+    ////ACCESSORS
+    public String getNom() {
+        return nom;
+    }
     
     ////METHODS
     abstract public void manger();
