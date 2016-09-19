@@ -12,7 +12,7 @@ package test1.gateau;
 public class Gateau {
     
     ////ATTRIBUTS
-    private String forme;
+    private static String forme = "Rond";
     private String gout;
     
     ////ACCESSORS
@@ -36,7 +36,7 @@ public class Gateau {
 
     @Override
     public String toString() {
-        return "Gateau au " + this.gout;
+        return "Gateau " + Gateau.forme + " au " + this.gout;
     }
     
 }
