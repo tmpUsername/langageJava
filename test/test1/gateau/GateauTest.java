@@ -20,7 +20,7 @@ public class GateauTest {
         Gateau deuxieme = new Gateau();
         Gateau troisieme = new Gateau();
         
-        premier.setGout("chocolat");
+        premier.setGout("Chocolat");
         deuxieme.setGout("Chocolat");
         troisieme.setGout("Citron");
         
