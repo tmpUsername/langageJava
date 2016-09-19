@@ -38,6 +38,11 @@ public class Film {
         this.genre = genre;
         this.acteurs.addAll(acteurs);
     }
+
+    public Film() {
+    }
+    
+    
     
     ////ACCESSOR////
     public void setTitre(String titre) {
