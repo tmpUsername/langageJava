@@ -14,6 +14,7 @@ public class Gateau {
     ////ATTRIBUTS
     private static String forme = "Rond";
     private String gout;
+    private String couleur;
     
     ////ACCESSORS
     public String getForme() {
@@ -30,6 +31,14 @@ public class Gateau {
 
     public void setGout(String gout) {
         this.gout = gout;
+    }
+
+    public String getCouleur() {
+        return couleur;
+    }
+
+    public void setCouleur(String couleur) {
+        this.couleur = couleur;
     }
     
     ////METHODS
