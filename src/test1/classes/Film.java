@@ -19,7 +19,7 @@ public class Film {
     private String synopsis;
     private Integer annee;
     private Genre genre;
-    private ArrayList<Acteur> acteurs;
+    private ArrayList<Acteur> acteurs = new ArrayList<>();
     
     ////CONSTRUCTOR////
     
