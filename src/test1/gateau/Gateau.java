@@ -16,6 +16,12 @@ public class Gateau {
     private String gout;
     private String couleur;
     
+    ////CONSTRUCTOR
+    public Gateau(String gout, String couleur) {
+        this.gout = gout;
+        this.couleur = couleur;
+    }
+    
     ////ACCESSORS
     public String getForme() {
         return forme;
