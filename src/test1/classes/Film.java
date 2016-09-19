@@ -5,7 +5,8 @@
  */
 package test1.classes;
 
-import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
 
 /**
  *
@@ -19,7 +20,7 @@ public class Film {
     private String synopsis;
     private Integer annee;
     private Genre genre;
-    private ArrayList<Acteur> acteurs = new ArrayList<>();
+    private HashSet<Acteur> acteurs = new HashSet<>();
     
     ////CONSTRUCTOR////
     public Film(String titre, Integer duree, String synopsis, Integer annee, Genre genre) {
@@ -29,13 +30,13 @@ public class Film {
         this.annee = annee;
         this.genre = genre;
     }
-    public Film(String titre, Integer duree, String synopsis, Integer annee, Genre genre, ArrayList<Acteur> acteurs) {
+    public Film(String titre, Integer duree, String synopsis, Integer annee, Genre genre, Collection<Acteur> acteurs) {
         this.titre = titre;
         this.duree = duree;
         this.synopsis = synopsis;
         this.annee = annee;
         this.genre = genre;
-        this.acteurs = acteurs;
+        this.acteurs.addAll(acteurs);
     }
     
     ////ACCESSOR////
@@ -72,7 +73,14 @@ public class Film {
     }
     
     ////METHODS////
-
+    public void ajouteActeur(Acteur acteur){
+        this.acteurs.add(acteur);
+    }
+    
+    public void ajouteActeurs(Collection<Acteur> acteurs){
+        this.acteurs.addAll(acteurs);
+    }
+    
     @Override
     public String toString() {
         return "Film {" + "titre:" + titre  + ", synopsis:" + 
