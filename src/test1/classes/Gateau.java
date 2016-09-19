@@ -11,5 +11,9 @@ package test1.classes;
  */
 public class Gateau {
     
+    ////ATTRIBUTS
+    private String forme;
+    private String gout;
+    
     
 }
