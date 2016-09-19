@@ -25,9 +25,6 @@ public class Tortue extends Reptile{
         System.out.println(this.getNom() + " marche quand il est sur terre");
     }
 
-    @Override
-    public void sleep() {
-        System.out.println(this.getNom() + " dors en nageant");
-    }
+
     
 }
