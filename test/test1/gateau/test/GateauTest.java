@@ -17,15 +17,15 @@ public class GateauTest {
     
     @Test
     public void test(){
-        System.out.println(Gateau.nbGateau);
+        System.out.println(Gateau.getNbGateau());
         Gateau premier = new Gateau("chocolat", "blanc");
-        System.out.println(Gateau.nbGateau);
+        System.out.println(Gateau.getNbGateau());
         Gateau deuxieme = new Gateau();
-        System.out.println(Gateau.nbGateau);
+        System.out.println(Gateau.getNbGateau());
         Gateau troisieme = new Gateau("chocolat", "jaune");
-        System.out.println(Gateau.nbGateau);
+        System.out.println(Gateau.getNbGateau());
         System.out.println(premier + "\n" + deuxieme + "\n" + troisieme);
-        System.out.println(Gateau.nbGateau);
+        System.out.println(Gateau.getNbGateau());
     }
     
 }
