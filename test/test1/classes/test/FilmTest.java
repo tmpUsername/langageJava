@@ -23,4 +23,18 @@ public class FilmTest {
        Assert.assertEquals("Pulp Fiction", pulpFiction.getTitre());
    }
     
+   @Test
+   public void test(){
+       Film f1 = new Film();
+       f1.setTitre("Pulp Fiction");
+       f1.setSynopsis("lalalalala");
+       
+       Film f2 = new Film();
+       f2.setTitre("Kung Fu Panda");
+       f2.setSynopsis("lalalalalalalla");
+       
+       System.out.println(f1);
+       System.out.println(f2);
+   }
+   
 }
