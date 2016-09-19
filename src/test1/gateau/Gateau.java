@@ -15,16 +15,19 @@ public class Gateau {
     private static String forme = "Rond";
     private String gout;
     private String couleur;
+    public static int nbGateau = 0;
     
     ////CONSTRUCTOR
     public Gateau(String gout, String couleur) {
         this.gout = gout;
         this.couleur = couleur;
+        Gateau.nbGateau++;
     }
 
     public Gateau() {
         this.gout = "chocolat";
         this.couleur = "noir";
+        Gateau.nbGateau++;
     }
     
     ////ACCESSORS
