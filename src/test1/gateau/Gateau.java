@@ -12,7 +12,7 @@ package test1.gateau;
 public class Gateau {
     
     ////ATTRIBUTS
-    private static String forme = "Rond";
+    private static String forme = "rond";
     private String gout;
     private String couleur;
     private static int nbGateau = 0;
