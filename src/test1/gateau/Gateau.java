@@ -45,7 +45,7 @@ public class Gateau {
 
     @Override
     public String toString() {
-        return "Gateau " + Gateau.forme + " au " + this.gout;
+        return "Gateau " + Gateau.forme + " au " + this.gout + " de couleur " + this.couleur;
     }
     
 }
