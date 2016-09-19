@@ -9,7 +9,7 @@ package test1.classes.animaux;
  *
  * @author admin
  */
-abstract public class Animal {
+abstract public class Animal implements Sleepable{
     ////ATTRIBUTS
     private String nom;
     
