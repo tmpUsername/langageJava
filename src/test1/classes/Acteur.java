@@ -15,7 +15,11 @@ public class Acteur {
     private String prenom;
     
     ////CONSTRUCTOR
-    
+    public Acteur(String nom, String prenom) {    
+        this.nom = nom;
+        this.prenom = prenom;
+    }
+
     ////ACCESSORS
     public String getNom() {
         return nom;
