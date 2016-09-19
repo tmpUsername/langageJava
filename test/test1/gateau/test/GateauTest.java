@@ -18,7 +18,7 @@ public class GateauTest {
     @Test
     public void test(){
         Gateau premier = new Gateau("chocolat", "blanc");
-        Gateau deuxieme = new Gateau("chocolat", "noir");
+        Gateau deuxieme = new Gateau();
         Gateau troisieme = new Gateau("chocolat", "jaune");
         
         System.out.println(premier + "\n" + deuxieme + "\n" + troisieme);
